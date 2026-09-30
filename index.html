@@ -8,13 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /*
- * Póster PetHood — 1600 × 2480 pt. Cambiar --W/--H y el @page si la Cátedra indica otro tamaño.
+ * Póster PetHood — 1800 × 2700 pt (2:3), se imprime escalado a 60 × 90 cm. Cambiar --W/--H y el @page si la Cátedra indica otro tamaño.
  * Tokens = apps/mobile/constants/theme.js (ORGANIC/PETHOOD/ESTADO/VACUNA) y web-admin/globals.css.
  * Las pantallas de los teléfonos y del panel web son maquetas HTML/CSS reproducidas desde el código
  * de los componentes (TarjetaAdopcion, historia-clinica, BurbujaMensaje, TarjetaAviso, KpiCard...).
  */
 :root{
-  --W:1600pt; --H:2760pt;
+  --W:1800pt; --H:2700pt;
   /* ORGANIC (mobile) — mismos valores que web-admin */
   --bg:#f5ead8; --surface:#f9f4ed;
   --a100:#fff2eb; --a200:#ffe1d0; --a300:#ffc6a5; --a400:#f6a06b; --a500:#d67f48; --a600:#b2622d; --a700:#8c491a; --a800:#643312; --a900:#402310;
@@ -24,18 +24,19 @@
   --gold:#fcb442; --ink:#201e1d; --succ600:#728157; --succ700:#56633f; --succ100:#f0fae1;
   --r:24pt;
 }
-@page{ size:1600pt 2760pt; margin:0 }
+@page{ size:600mm 900mm; margin:0 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:#3a342d}
 body{font-family:"Figtree",system-ui,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .t{font-family:"Caprasimo",Georgia,serif;font-weight:400}
 i.m{display:inline-block;width:1em;height:1em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;vertical-align:-.125em;flex:none}
 #wrap{transform-origin:top left}
-.poster{width:var(--W);height:var(--H);background:var(--bg);padding:30pt 52pt 0;display:flex;flex-direction:column;gap:16pt;overflow:hidden}
+.poster{width:var(--W);height:var(--H);background:var(--bg);padding:30pt 52pt 30pt;display:flex;flex-direction:column;gap:12pt;justify-content:space-between;overflow:hidden}
 
 /* ---------- encabezado ---------- */
-.top{display:flex;justify-content:space-between;gap:20pt;font-size:11.5pt;font-weight:700;letter-spacing:.6pt;color:var(--a700);border-bottom:1.5pt solid var(--n300);padding-bottom:8pt}
-.top span:last-child{color:var(--n600);font-weight:600}
+.top{display:flex;justify-content:space-between;gap:20pt;font-size:14pt;font-weight:700;letter-spacing:.6pt;color:var(--a700);border-bottom:1.5pt solid var(--n300);padding-bottom:8pt}
+.top{align-items:center}.utn{height:92pt;display:block}
+.top span:last-child{color:var(--n600);font-weight:600;font-size:20pt;line-height:1.2;text-align:right;letter-spacing:.3pt}
 .head{display:grid;grid-template-columns:170pt 1fr auto;gap:30pt;align-items:center}
 .logo{width:170pt;height:170pt;border-radius:32pt;background:#f2e4cc;display:grid;place-items:center;overflow:hidden}
 .logo img{width:104%}
@@ -43,11 +44,11 @@ i.m{display:inline-block;width:1em;height:1em;background:currentColor;-webkit-ma
 .brand .tag{font-size:40pt;color:var(--a800);margin-top:8pt;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:5pt;text-underline-offset:8pt}
 .autores{text-align:right;font-size:16pt;line-height:1.9;font-weight:500}
 .autores small{display:block;font-size:10pt;letter-spacing:4pt;font-weight:800;color:var(--a600);margin-bottom:4pt}
-.lead{font-size:18.5pt;line-height:1.4;font-weight:500;max-width:1400pt}
+.lead{font-size:22pt;line-height:1.4;font-weight:500;max-width:1600pt}
 .card{border-radius:var(--r);padding:20pt 24pt}
 .ps{display:grid;grid-template-columns:1fr 1fr;gap:16pt}
-.ps h3{font-size:24pt;margin-bottom:6pt}
-.ps p{font-size:16pt;line-height:1.4}
+.ps h3{font-size:30pt;margin-bottom:6pt}
+.ps p{font-size:20pt;line-height:1.4}
 .pr{background:var(--surface)}.pr h3{color:var(--a600)}
 .so{background:var(--a600);color:#fff}
 h2.sec{font-size:34pt;color:var(--a600);margin:2pt 0 -2pt;display:flex;align-items:baseline;gap:14pt}
@@ -59,8 +60,8 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .f .ph{border-radius:24pt 24pt 0 0;overflow:hidden;background:#1d1a17;padding:6pt 6pt 0;box-shadow:0 0 0 1pt #0004}
 .f .fit{border-radius:19pt 19pt 0 0;overflow:hidden;background:var(--bg)}
 .f .cap{padding:11pt 4pt 14pt}
-.f .cap i{font-style:normal;font-size:10pt;letter-spacing:2.5pt;font-weight:800;opacity:.8;display:block;margin-bottom:3pt}
-.f .cap b{font-family:"Caprasimo",serif;font-weight:400;font-size:19pt;line-height:1.1;display:block}
+.f .cap i{font-style:normal;font-size:13pt;letter-spacing:2.5pt;font-weight:800;opacity:.8;display:block;margin-bottom:3pt}
+.f .cap b{font-family:"Caprasimo",serif;font-weight:400;font-size:23pt;line-height:1.1;display:block}
 .c1{background:var(--a600)}.c2{background:var(--a500)}.c3{background:var(--gold);color:var(--a800)}.c4{background:var(--a800)}.c5{background:var(--a600)}.c6{background:var(--a500)}
 
 /* ---------- pantallas móviles (px, base 390) — reproducen el TSX de apps/mobile ---------- */
@@ -173,9 +174,8 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .btn2{background:var(--a600);color:#fff;border-radius:16px;text-align:center;padding:12px;font-size:15px;font-weight:700;margin-top:12px;display:flex;justify-content:center;gap:8px;align-items:center}
 
 /* ---------- web ---------- */
-.mid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16pt}
+.mid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16pt}
 .webw{background:var(--a500);padding:14pt;min-width:0}
-.side{display:grid;grid-template-rows:auto 1fr;gap:16pt;min-width:0}
 .wtxt{background:var(--a600);color:#fff}
 .web{background:var(--a500);color:#fff;display:grid;grid-template-columns:1.45fr 1fr;gap:22pt;align-items:center;padding:16pt 26pt 16pt 16pt}
 .win{min-width:0;border-radius:14pt;overflow:hidden;background:#2b2620;box-shadow:0 5pt 18pt #0005;border:4pt solid #2b2620}
@@ -238,58 +238,57 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .don .m{font-size:14px;font-weight:500;color:var(--n700)}
 .lg2{display:flex;gap:12px;font-size:14px;font-weight:500;color:var(--n700)}
 .lg2 span{display:flex;align-items:center;gap:6px}.lg2 s{width:10px;height:10px;border-radius:50%;background:#16a34a}.lg2 s.o{width:12px;height:2px;border-radius:2px;background:#0284c7}
-.wtxt .n{font-size:11pt;letter-spacing:2.5pt;font-weight:800;opacity:.85}
-.wtxt h3{font-size:30pt;line-height:1.05;margin:7pt 0 10pt}
-.wtxt p{font-size:15pt;line-height:1.4}
-.wtxt ul{list-style:none;margin-top:12pt;font-size:14pt;font-weight:600;line-height:1.75}
-.wtxt li i.m{color:var(--gold);margin-right:6pt}
-.qr{background:var(--surface);display:flex;align-items:center;justify-content:center;gap:22pt;padding:18pt}
-.qr .qt{display:flex;flex-direction:column;align-items:flex-start;gap:8pt}
-.qr .box{width:170pt;height:170pt;flex:none;background:#fff;border-radius:12pt;display:grid;place-items:center;font-size:11pt;color:var(--n600);padding:8pt;border:2pt dashed var(--a400)}
-.qr .box img{width:100%;height:100%;object-fit:contain}
-.qr b{font-size:28pt;color:var(--a600);line-height:1}
-.qr small{font-size:17pt;color:var(--a700);font-weight:800}
-.qr .demo{display:flex;align-items:center;gap:7pt;background:var(--a100);border:1pt solid var(--a300);color:var(--a800);border-radius:99pt;padding:5pt 12pt;font-size:12pt;font-weight:700}
+.side{display:flex;min-width:0}
+.wtxt{flex:1;display:flex;flex-direction:column;padding:22pt 24pt}
+.wtxt .n{font-size:13pt;letter-spacing:2.5pt;font-weight:800;opacity:.85}
+.wtxt h3{font-size:36pt;line-height:1.05;margin:7pt 0 10pt}
+.wtxt p{font-size:19pt;line-height:1.4}
+.wtxt ul{flex:1;list-style:none;margin:16pt 0;display:flex;flex-direction:column;gap:10pt}
+.wtxt li{flex:1;display:flex;align-items:center;gap:14pt;background:#ffffff1f;border-radius:16pt;padding:0 16pt;font-size:21pt;font-weight:700;line-height:1.2}
+.wtxt li .ib{width:44pt;height:44pt;flex:none;border-radius:12pt;background:#0000002e;display:grid;place-items:center;font-size:25pt;color:var(--gold)}
+.qrs{display:flex;align-items:center;gap:16pt;background:var(--surface);color:var(--ink);border-radius:18pt;padding:12pt 16pt}
+.qrs .box{width:112pt;height:112pt;flex:none;background:#fff;border-radius:10pt;padding:6pt;border:2pt dashed var(--a400)}
+.qrs .box img{width:100%;height:100%;object-fit:contain;display:block}
+.qrs .qt{display:flex;flex-direction:column;align-items:flex-start;gap:6pt}
+.qrs b{font-size:30pt;color:var(--a600);line-height:1}
+.qrs small{font-size:20pt;color:var(--a700);font-weight:800}
+.qrs .demo{display:flex;align-items:center;gap:7pt;background:var(--a100);border:1pt solid var(--a300);color:var(--a800);border-radius:99pt;padding:5pt 12pt;font-size:14pt;font-weight:700}
 
-/* ---------- clases ---------- */
-.dg{background:var(--surface);border-radius:var(--r);padding:16pt 22pt 18pt}
-.dg h2{margin-bottom:8pt}
-.cls{position:relative;width:1452pt;height:352pt}
-.cls .bx{position:absolute;width:260pt;border:1.5pt solid var(--a600);border-radius:10pt;background:#fff;overflow:hidden;font-size:12.5pt;line-height:1.3}
-.cls .bx h6{background:var(--a600);color:#fff;font-size:13pt;padding:3pt 9pt;font-weight:700;letter-spacing:.2pt}
-.cls .bx div{padding:4pt 9pt 5pt;color:var(--n800)}
-.cls .bx div span{display:block}
-.cls svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.cls svg line,.cls svg polyline{stroke:var(--a700);stroke-width:1.6;fill:none}
-.cls svg text{font-size:8.6pt;font-weight:700;fill:var(--a800);font-family:Figtree}
-.leg{font-size:11pt;color:var(--n600);margin-top:8pt;font-weight:500}
+/* ---------- tecnologías ---------- */
+.tec{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 26pt}
+.tec h2{margin-bottom:12pt}
+.tl{display:flex;justify-content:space-between;gap:8pt}
+.tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:10pt;font-size:20pt;font-weight:700;text-align:center;line-height:1.15}
+.tl i.m{font-size:84pt}
+.tl small{display:block;font-size:15pt;font-weight:600;color:var(--n600);margin-top:1pt}
 
 /* ---------- arquitectura ---------- */
-.arq{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 14pt}
+.arq{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 18pt}
 .arq h2{margin-bottom:10pt}
-.ar{display:grid;grid-template-columns:minmax(0,1fr) 70pt minmax(0,1.45fr) 56pt minmax(0,.8fr);align-items:stretch}
-.col{border-radius:18pt;padding:14pt 16pt;display:flex;flex-direction:column;gap:10pt}
-.col>small{font-size:10pt;letter-spacing:3.5pt;font-weight:800}
+.ar{display:grid;grid-template-columns:minmax(0,1fr) 130pt minmax(0,1.7fr) 110pt minmax(0,1fr);align-items:stretch}
+.col{border-radius:18pt;padding:14pt 16pt;display:flex;flex-direction:column;gap:12pt}
+.col>small{font-size:13pt;letter-spacing:3.5pt;font-weight:800}
 .cl{background:#fbe6af80;border:1.5pt solid var(--amarillo)}.cl>small{color:var(--a700)}
 .be{background:#2b2620;color:#fff}.be>small{color:var(--gold)}
 .da{background:var(--a800);color:#fff}.da>small{color:var(--amarillo)}
-.nd{background:#fff;color:var(--ink);border-radius:12pt;padding:10pt 12pt;font-size:11.5pt;line-height:1.3}
-.nd b{display:block;font-size:14.5pt;margin-bottom:2pt}
-.nd .lg{display:flex;gap:9pt;margin:5pt 0 4pt;font-size:24pt}
-.be .nd{background:#ffffff14;color:#fff;border:1pt solid #ffffff1f}
-.be .row2{display:grid;grid-template-columns:1fr 1fr;gap:9pt}
-.pipe{display:flex;flex-wrap:wrap;gap:5pt;margin-top:6pt}
-.pipe s{text-decoration:none;background:#ffffff1f;border-radius:99pt;padding:2pt 9pt;font-size:10.5pt;font-weight:600}
-.lnk{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26pt;font-size:10.5pt;font-weight:800;text-align:center;color:var(--a700);line-height:1.2}
-.lnk div{width:100%;position:relative}
-.lnk div:before{content:"";display:block;border-top:2.5pt solid var(--a600);margin:0 0 4pt}
-.lnk div:after{content:"";position:absolute;right:-1pt;top:-5.5pt;border:6pt solid transparent;border-left:9pt solid var(--a600);border-right:0}
+.ic{flex:1;display:flex;align-items:center;gap:14pt;background:#fff;color:var(--ink);border-radius:16pt;padding:18pt 18pt}
+.ic .ib{width:54pt;height:54pt;flex:none;border-radius:14pt;background:var(--a100);display:grid;place-items:center;font-size:32pt}
+.ic b{display:block;font-size:21pt;line-height:1.15}
+.ic em{display:block;font-style:normal;font-size:15pt;color:var(--n600);margin-top:2pt;font-weight:500}
+.ic.g{border:1.5pt solid #4285F4}.ic.g .ib{background:#e8f0fe}
+.be .ic,.da .ic{background:#ffffff14;color:#fff;border:1pt solid #ffffff1f}
+.be .ic .ib,.da .ic .ib{background:#ffffff1a}
+.be .ic em,.da .ic em{color:#ffffffb3}
+.r3{flex:1.1;display:grid;grid-template-columns:repeat(3,1fr);gap:12pt}
+.r3 .ic{flex-direction:column;justify-content:center;text-align:center;gap:8pt}
+.r3 .ic b{font-size:19pt}
+.extra{background:#4285F4;color:#fff;border-radius:99pt;font-size:11pt;letter-spacing:1.5pt;font-weight:800;padding:2pt 9pt;margin-left:auto;align-self:flex-start}
+.lnk{display:flex;flex-direction:column;padding:36pt 0 0;font-size:14pt;font-weight:800;text-align:center;color:var(--a700);line-height:1.2}
+.lnk div{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative}
+.lnk div:before{content:"";display:block;order:2;border-top:3pt solid var(--a600);margin:4pt 0 0}
+.lnk div:after{content:"";position:absolute;right:-1pt;top:calc(50% + 2pt);border:7pt solid transparent;border-left:10pt solid var(--a600);border-right:0;margin-top:-1pt}
 .lnk div.ws:before{border-top-style:dashed}
-.google{display:flex;align-items:center;gap:10pt;background:#fff;border:1.5pt solid #4285F4;border-radius:12pt;padding:8pt 12pt;font-size:11.5pt;line-height:1.25}
-.google b{font-size:13.5pt;display:block}
-.google .gi{font-size:26pt;color:#4285F4}
-.extra{background:#4285F4;color:#fff;border-radius:99pt;font-size:9pt;letter-spacing:1.5pt;font-weight:800;padding:2pt 9pt;margin-left:auto;align-self:flex-start}
-.note{font-size:11pt;color:var(--n600);margin-top:8pt;font-weight:500}
+.lnk div{margin-top:0}
 
 /* ---------- KPIs / pie ---------- */
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14pt}
@@ -298,22 +297,21 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .kpi span{font-size:13pt;font-weight:600;color:var(--n600)}
 .kpi.dark{background:var(--a600);color:#fff}.kpi.dark b{color:#fff}.kpi.dark span{color:#fbe6d6}
 .foot{margin:auto -52pt 0;background:var(--surface);padding:16pt 52pt;display:flex;justify-content:center;border-top:1pt solid #e4d8c4}
-.utn{font-size:17pt;line-height:1.25;font-weight:800}
-.utn span{font-weight:500;display:block;font-size:13pt}
-.team{display:flex;gap:26pt;justify-content:center}
-.team figure{text-align:center;width:84pt}
-.team img{width:56pt;height:56pt;border-radius:50%;object-fit:cover;border:3pt solid var(--a500);display:block;margin:0 auto 4pt}
-.team figcaption{font-size:10.5pt;font-weight:700;line-height:1.15}
+.team{display:flex;gap:22pt;justify-content:flex-end}
+.team figure{text-align:center;width:118pt}
+.team img{width:96pt;height:96pt;border-radius:50%;object-fit:cover;border:3pt solid var(--a500);display:block;margin:0 auto 4pt}
+.team figcaption{font-size:15pt;font-weight:700;line-height:1.15}
 .year{font-size:38pt;color:var(--a600);line-height:.95;text-align:right}
 .year small{display:block;font-family:Figtree;font-size:13pt;font-weight:600;color:var(--ink);margin-top:3pt}
-@media print{ html{background:none} #wrap{transform:none!important} }
+/* diseño 1800×2700pt → hoja 60×90 cm: 600mm/1800pt = 0.94488 */
+@media print{ html{background:var(--bg);zoom:.94488} body{height:auto!important} #wrap{transform:none!important} }
 </style>
 </head>
 <body>
 <div id="wrap">
 <main class="poster">
 
-  <div class="top"><span>UNIVERSIDAD TECNOLÓGICA NACIONAL · FACULTAD REGIONAL MENDOZA</span><span>20.ª Exposición Anual de Proyectos de Sistemas · Ingeniería en Sistemas de Información · Cátedra: Proyecto Final · Noviembre de 2026</span></div>
+  <div class="top"><img class="utn" src="assets/utn.png" alt="UTN Mendoza · Universidad Tecnológica Nacional"><span>20.ª Exposición Anual de Proyectos de Sistemas<br>Ingeniería en Sistemas de Información<br>Cátedra: Proyecto Final<br>Noviembre de 2026</span></div>
 
   <header class="head">
     <div class="logo"><img src="assets/logo.png" alt="PetHood"></div>
@@ -321,10 +319,14 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
       <h1 class="t">PetHood</h1>
       <div class="tag t">Adoptar es cambiar dos vidas.</div>
     </div>
-    <div class="autores"><small>AUTORES</small>Agustín Leyes<br>Camila Fabián<br>Juan Ignacio Castro<br>Matías Hansen<br>Nicolás Correa</div>
+    <div class="team"><figure><img src="assets/Agustin-leyes.jpeg" alt=""><figcaption>Agustín Leyes</figcaption></figure>
+      <figure><img src="assets/Camila-Fabian.jpeg" alt=""><figcaption>Camila Fabián</figcaption></figure>
+      <figure><img src="assets/Juan-Ignacio-Castro.jpeg" alt=""><figcaption>Juan I. Castro</figcaption></figure>
+      <figure><img src="assets/Matias-Hansen.jpeg" alt=""><figcaption>Matías Hansen</figcaption></figure>
+      <figure><img src="assets/Nicolas-Correa.png" alt=""><figcaption>Nicolás Correa</figcaption></figure></div>
   </header>
 
-  <p class="lead">PetHood es una plataforma donde las familias encuentran a su compañero y los refugios ordenan todo desde un mismo lugar: publicaciones, solicitudes, historia clínica y seguimiento post-adopción con prueba de vida. Además, chat en tiempo real, reseñas que generan confianza, campañas solidarias, alertas de mascotas perdidas e ingreso con Google.</p>
+  <p class="lead">PetHood junta en una sola plataforma a las familias que quieren adoptar y a los refugios que hoy lo resuelven por Facebook y WhatsApp. Ellas deslizan, postulan y chatean en tiempo real; ellos publican animales, gestionan solicitudes, llevan la historia clínica y comprueban con fotos tomadas en el momento cómo le va a cada mascota después de adoptar. Además: reseñas, campañas solidarias con donaciones y alertas de mascotas perdidas.</p>
 
   <section class="ps">
     <div class="card pr"><h3 class="t">Problema</h3><p>Adoptar hoy pasa por grupos de Facebook y WhatsApp: sin trazabilidad, sin seguimiento y sin forma de saber cómo le fue a la mascota.</p></div>
@@ -409,48 +411,18 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
       <div class="card wtxt">
         <div class="n">DASHBOARDS · MODERACIÓN · CSV</div>
         <h3 class="t">Todos tus animales en un solo lugar</h3>
-        <p>Panel de escritorio para refugios verificados y administración: KPIs por período y exportación por streams.</p>
-        <ul><li><i class="m" data-i="lu-building-2"></i>Validación de refugios y usuarios</li><li><i class="m" data-i="lu-clipboard-list"></i>Solicitudes y publicaciones</li><li><i class="m" data-i="lu-megaphone"></i>Consultas, FAQs y catálogos</li></ul>
+        <p>Panel de escritorio para refugios verificados y administración.</p>
+        <ul>
+          <li><span class="ib"><i class="m" data-i="lu-layout-dashboard"></i></span>KPIs por período y exportación CSV</li>
+          <li><span class="ib"><i class="m" data-i="lu-building-2"></i></span>Validación de refugios y usuarios</li>
+          <li><span class="ib"><i class="m" data-i="lu-clipboard-list"></i></span>Solicitudes y publicaciones</li>
+          <li><span class="ib"><i class="m" data-i="lu-megaphone"></i></span>Consultas, FAQs y catálogos</li>
+        </ul>
+        <div class="qrs">
+          <div class="box"><img src="assets/qr.svg" alt=""></div>
+          <div class="qt"><b class="t">Probala ahora</b><small>pethood.test</small><div class="demo"><i class="m" data-i="lu-building-2"></i>refugio@pethood.test</div></div>
+        </div>
       </div>
-      <div class="card qr">
-        <div class="box"><img src="assets/qr.svg" alt=""></div>
-        <div class="qt"><b class="t">Probala ahora</b><small>pethood.test</small><div class="demo"><i class="m" data-i="lu-building-2"></i>refugio@pethood.test</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="dg">
-    <h2 class="sec t">Modelo de clases</h2>
-    <div class="cls">
-      <div class="bx" style="left:0pt;top:0pt"><h6>Refugio</h6><div><span>nombre, direccion, descripcion</span><span>verificado: Boolean</span><span>estado → EstadoRefugio</span></div></div>
-      <div class="bx" style="left:298pt;top:0pt"><h6>Usuario</h6><div><span>nombre, apellido, email, dni</span><span>googleId · roles (N:M)</span><span>refugio (0..1) · favoritos</span></div></div>
-      <div class="bx" style="left:596pt;top:0pt"><h6>Mascota</h6><div><span>nombre, genero, tamanio</span><span>fechaNacimiento, peso</span><span>castrado: Boolean</span></div></div>
-      <div class="bx" style="left:894pt;top:0pt"><h6>Publicacion</h6><div><span>titulo, descripcion</span><span>requisitos[], personalidad[]</span><span>imagenes[]</span></div></div>
-      <div class="bx" style="left:1192pt;top:0pt"><h6>Solicitud</h6><div><span>motivacion, comentario</span><span>tipo: adopción / tránsito</span><span>estado (histórico)</span></div></div>
-      <div class="bx" style="left:0pt;top:135pt"><h6>Campania</h6><div><span>titulo, objetivo</span><span>fechaInicio, fechaFin</span><span>estado → EstadoCampania</span></div></div>
-      <div class="bx" style="left:298pt;top:135pt"><h6>Hogar</h6><div><span>direccion, tienePatio</span><span>tieneMascotas, tieneNinios</span><span>disponibilidad de tránsito</span></div></div>
-      <div class="bx" style="left:596pt;top:135pt"><h6>HistoriaClinica</h6><div><span>fechaVisita, titulo</span><span>vacunacion, tipoVacuna</span><span>requiereRevision · inmutable</span></div></div>
-      <div class="bx" style="left:894pt;top:135pt"><h6>Seguimiento</h6><div><span>descripcion, fotoUrl</span><span>plazo, esManual</span><span>PreguntaSeguimiento</span></div></div>
-      <div class="bx" style="left:1192pt;top:135pt"><h6>Chat</h6><div><span>participantes (UsuarioChat)</span><span>refugio / solicitud</span></div></div>
-      <div class="bx" style="left:0pt;top:270pt"><h6>Donacion</h6><div><span>monto</span><span>campania, usuario</span><span>confirmada por el refugio</span></div></div>
-      <div class="bx" style="left:298pt;top:270pt"><h6>Resena</h6><div><span>puntuacion, comentario</span><span>autor → Usuario</span><span>reportado → Usuario / Refugio</span></div></div>
-      <div class="bx" style="left:596pt;top:270pt"><h6>AnimalPerdido</h6><div><span>descripcion, ubicacion</span><span>latitud, longitud</span><span>estado: Perdido / Encontrado</span></div></div>
-      <div class="bx" style="left:1192pt;top:270pt"><h6>Mensaje</h6><div><span>contenido, leido</span><span>tipo, imagenes[]</span></div></div>
-      <svg viewBox="0 0 1452 352" preserveAspectRatio="none">
-        <line x1="260" y1="46" x2="298" y2="46"/><text x="263" y="40">1</text><text x="285" y="60">*</text>
-        <line x1="558" y1="46" x2="596" y2="46"/><text x="561" y="40">1</text><text x="583" y="60">*</text>
-        <line x1="856" y1="46" x2="894" y2="46"/><text x="859" y="40">1</text><text x="881" y="60">*</text>
-        <line x1="1154" y1="46" x2="1192" y2="46"/><text x="1157" y="40">1</text><text x="1179" y="60">*</text>
-        <line x1="130" y1="92" x2="130" y2="135"/><text x="136" y="106">1</text><text x="136" y="131">*</text>
-        <line x1="130" y1="227" x2="130" y2="270"/><text x="136" y="241">1</text><text x="136" y="266">*</text>
-        <line x1="428" y1="92" x2="428" y2="135"/><text x="434" y="106">1</text><text x="434" y="131">*</text>
-        <line x1="726" y1="92" x2="726" y2="135"/><text x="732" y="106">1</text><text x="732" y="131">*</text>
-        <line x1="1322" y1="92" x2="1322" y2="135"/><text x="1328" y="106">1</text><text x="1328" y="131">*</text>
-        <line x1="1322" y1="227" x2="1322" y2="270"/><text x="1328" y="241">1</text><text x="1328" y="266">*</text>
-        <polyline points="1230,92 1230,114 1024,114 1024,135"/><text x="1236" y="106">1</text><text x="1030" y="131">*</text>
-        <polyline points="298,70 279,70 279,316 298,316"/><text x="262" y="84">1</text><text x="262" y="308">*</text>
-        <polyline points="558,70 577,70 577,316 596,316"/><text x="562" y="84">1</text><text x="580" y="308">*</text>
-      </svg>
     </div>
   </section>
 
@@ -458,45 +430,44 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
     <h2 class="sec t">Arquitectura</h2>
     <div class="ar">
       <div class="col cl"><small>CLIENTES</small>
-        <div class="nd"><b>Panel web</b><div class="lg"><i class="m" data-l="nextdotjs" style="color:#000"></i><i class="m" data-l="react" style="color:#61DAFB"></i><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><i class="m" data-l="typescript" style="color:#3178C6"></i></div>Next.js 16 · Tailwind 4 · lucide<br>Admin y refugios verificados</div>
-        <div class="nd"><b>App móvil</b><div class="lg"><i class="m" data-l="expo" style="color:#000020"></i><i class="m" data-l="react" style="color:#61DAFB"></i><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><i class="m" data-l="typescript" style="color:#3178C6"></i></div>Expo 57 · React Native · NativeWind<br>Adoptantes y refugios en campo</div>
-        <div class="google"><i class="m gi" data-l="google"></i><div><b>Google Auth</b>Ingreso con Google desde la app<br>(expo-auth-session)</div><span class="extra">EXTRA</span></div>
+        <div class="ic"><span class="ib" style="color:#000020"><i class="m" data-i="smartphone"></i></span><div><b>Cliente mobile</b><em>Expo · React Native</em></div></div>
+        <div class="ic"><span class="ib" style="color:#000"><i class="m" data-i="monitor"></i></span><div><b>Cliente web</b><em>Next.js · panel de refugios y admin</em></div></div>
+        <div class="ic g"><span class="ib" style="color:#4285F4"><i class="m" data-l="google"></i></span><div><b>Google Auth</b><em>Ingreso con Google</em></div><span class="extra">EXTRA</span></div>
       </div>
       <div class="lnk"><div>HTTPS<br>+ JWT</div><div class="ws">Socket.IO<br>(móvil)</div><div>ID token<br>de Google</div></div>
-      <div class="col be"><small>BACKEND</small>
-        <div class="nd"><b>API REST /api/v1</b><div class="lg"><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><i class="m" data-l="express" style="color:#fff"></i><i class="m" data-l="typescript" style="color:#3178C6"></i><i class="m" data-l="zod" style="color:#6d95e0"></i><i class="m" data-l="jsonwebtokens" style="color:#fff"></i><i class="m" data-l="vitest" style="color:#6E9F18"></i></div>
-          Express 5 · TypeScript · Zod · JWT
-          <div class="pipe"><s>rate-limit</s><s>JWT</s><s>RBAC + X-Ambito</s><s>Zod</s><s>controller</s><s>service</s><s>repository</s></div></div>
-        <div class="row2">
-          <div class="nd"><b>Chat en tiempo real</b><div class="lg"><i class="m" data-l="socketdotio" style="color:#fff"></i></div>Socket.IO · presencia y ticks de lectura</div>
-          <div class="nd"><b>Tareas programadas</b>Cancela solicitudes vencidas · activa y finaliza campañas<br>(cron del sistema)</div>
-          <div class="nd"><b>Imágenes</b>Compresión con sharp antes de guardar (≤ 5 MB)</div>
-          <div class="nd"><b>Google</b>google-auth-library valida el ID token y vincula <code>googleId</code></div>
+      <div class="col be"><small>SERVIDOR</small>
+        <div class="ic"><span class="ib" style="color:#fff"><i class="m" data-l="express"></i></span><div><b>API REST /api/v1</b><em>Node · Express 5 · TypeScript · Zod · JWT</em></div></div>
+        <div class="r3">
+          <div class="ic"><span class="ib" style="color:#fff"><i class="m" data-l="socketdotio"></i></span><div><b>WebSocket</b><em>Chat y presencia</em></div></div>
+          <div class="ic"><span class="ib" style="color:var(--gold)"><i class="m" data-i="clock"></i></span><div><b>Crones</b><em>Solicitudes y campañas</em></div></div>
+          <div class="ic"><span class="ib" style="color:var(--amarillo)"><i class="m" data-i="image-outline"></i></span><div><b>Imágenes</b><em>Compresión con sharp</em></div></div>
         </div>
       </div>
       <div class="lnk"><div>Prisma</div><div>S3 API</div></div>
       <div class="col da"><small>DATOS</small>
-        <div class="nd" style="background:#ffffff14;color:#fff;border-color:#ffffff1f"><b>PostgreSQL</b><div class="lg"><i class="m" data-l="postgresql" style="color:#7fa2ff"></i><i class="m" data-l="prisma" style="color:#fff"></i><i class="m" data-l="docker" style="color:#2496ED"></i></div>Prisma 5 · bajas lógicas y auditoría · Docker en desarrollo</div>
-        <div class="nd" style="background:#ffffff14;color:#fff;border-color:#ffffff1f"><b>Archivos</b><div class="lg"><i class="m" data-l="cloudflare" style="color:#F38020"></i></div>Cloudflare R2 (compatible S3) o disco local</div>
+        <div class="ic"><span class="ib" style="color:#7fa2ff"><i class="m" data-l="postgresql"></i></span><div><b>PostgreSQL</b><em>Bajas lógicas y auditoría</em></div></div>
+        <div class="ic"><span class="ib" style="color:#F38020"><i class="m" data-l="cloudflare"></i></span><div><b>Cloudflare R2</b><em>Archivos (o disco local)</em></div></div>
       </div>
     </div>
   </section>
 
-  <footer class="foot">
-        <div class="team">
-      <figure><img src="assets/Agustin-leyes.jpeg" alt=""><figcaption>Agustín Leyes</figcaption></figure>
-      <figure><img src="assets/Camila-Fabian.jpeg" alt=""><figcaption>Camila Fabián</figcaption></figure>
-      <figure><img src="assets/Juan-Ignacio-Castro.jpeg" alt=""><figcaption>Juan I. Castro</figcaption></figure>
-      <figure><img src="assets/Matias-Hansen.jpeg" alt=""><figcaption>Matías Hansen</figcaption></figure>
-      <figure><img src="assets/Nicolas-Correa.png" alt=""><figcaption>Nicolás Correa</figcaption></figure>
-    </div>
-  </footer>
+  <section class="tec">
+    <h2 class="sec t">Tecnologías</h2>
+    <div class="tl"><div><i class="m" data-l="expo" style="color:#000020"></i><span>Expo<small>App móvil</small></span></div><div><i class="m" data-l="react" style="color:#61DAFB"></i><span>React Native<small>App móvil</small></span></div><div><i class="m" data-l="nextdotjs" style="color:#000"></i><span>Next.js<small>Panel web</small></span></div><div><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><span>Tailwind<small>Estilos</small></span></div><div><i class="m" data-l="typescript" style="color:#3178C6"></i><span>TypeScript<small>Todo el stack</small></span></div><div><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><span>Node.js<small>Servidor</small></span></div><div><i class="m" data-l="express" style="color:#201e1d"></i><span>Express<small>API REST</small></span></div><div><i class="m" data-l="socketdotio" style="color:#201e1d"></i><span>Socket.IO<small>Chat</small></span></div><div><i class="m" data-l="prisma" style="color:#2D3748"></i><span>Prisma<small>ORM</small></span></div><div><i class="m" data-l="postgresql" style="color:#336791"></i><span>PostgreSQL<small>Base de datos</small></span></div><div><i class="m" data-l="docker" style="color:#2496ED"></i><span>Docker<small>Desarrollo</small></span></div><div><i class="m" data-l="cloudflare" style="color:#F38020"></i><span>Cloudflare R2<small>Archivos</small></span></div><div><i class="m" data-l="google" style="color:#4285F4"></i><span>Google Auth<small>Ingreso</small></span></div><div><i class="m" data-l="vitest" style="color:#6E9F18"></i><span>Vitest<small>Tests</small></span></div></div>
+  </section>
+
 
 </main>
 </div>
 <script src="assets/icons.js"></script>
 <script>
 // Íconos reales: Ionicons/MDI (móvil), Lucide (web) y logos de Simple Icons, pintados con currentColor.
+const lu=b=>'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+b+'</svg>');
+ICONS.smartphone=lu('<rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/>');
+ICONS.monitor=lu('<rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/>');
+ICONS.clock=lu('<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>');
+ICONS['lu-shield-check']=lu('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>');
+ICONS['lu-users']=lu('<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>');
 document.querySelectorAll('[data-i]').forEach(e=>e.style.setProperty('--i',`url("${ICONS[e.dataset.i]}")`));
 document.querySelectorAll('[data-l]').forEach(e=>e.style.setProperty('--i',`url("${ICONS['logo:'+e.dataset.l]}")`));
 // Escala cada pantalla (390 px de diseño) al ancho de su marco.
