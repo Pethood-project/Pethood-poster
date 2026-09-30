@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PetHood — Póster</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -260,6 +261,7 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .tl{display:flex;justify-content:space-between;gap:8pt}
 .tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:10pt;font-size:20pt;font-weight:700;text-align:center;line-height:1.15}
 .tl i.m{font-size:84pt}
+.tl img{width:84pt;height:84pt;object-fit:contain}
 .tl small{display:block;font-size:15pt;font-weight:600;color:var(--n600);margin-top:1pt}
 
 /* ---------- arquitectura ---------- */
@@ -453,7 +455,7 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 
   <section class="tec">
     <h2 class="sec t">Tecnologías</h2>
-    <div class="tl"><div><i class="m" data-l="expo" style="color:#000020"></i><span>Expo<small>App móvil</small></span></div><div><i class="m" data-l="react" style="color:#61DAFB"></i><span>React Native<small>App móvil</small></span></div><div><i class="m" data-l="nextdotjs" style="color:#000"></i><span>Next.js<small>Panel web</small></span></div><div><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><span>Tailwind<small>Estilos</small></span></div><div><i class="m" data-l="typescript" style="color:#3178C6"></i><span>TypeScript<small>Todo el stack</small></span></div><div><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><span>Node.js<small>Servidor</small></span></div><div><i class="m" data-l="express" style="color:#201e1d"></i><span>Express<small>API REST</small></span></div><div><i class="m" data-l="socketdotio" style="color:#201e1d"></i><span>Socket.IO<small>Chat</small></span></div><div><i class="m" data-l="prisma" style="color:#2D3748"></i><span>Prisma<small>ORM</small></span></div><div><i class="m" data-l="postgresql" style="color:#336791"></i><span>PostgreSQL<small>Base de datos</small></span></div><div><i class="m" data-l="docker" style="color:#2496ED"></i><span>Docker<small>Desarrollo</small></span></div><div><i class="m" data-l="cloudflare" style="color:#F38020"></i><span>Cloudflare R2<small>Archivos</small></span></div><div><i class="m" data-l="google" style="color:#4285F4"></i><span>Google Auth<small>Ingreso</small></span></div><div><i class="m" data-l="vitest" style="color:#6E9F18"></i><span>Vitest<small>Tests</small></span></div></div>
+    <div class="tl"><div><i class="m" data-l="expo" style="color:#000020;-webkit-mask-size:76%;mask-size:76%"></i><span>Expo<small>App móvil</small></span></div><div><i class="m" data-l="react" style="color:#61DAFB"></i><span>React Native<small>App móvil</small></span></div><div><i class="m" data-l="nextdotjs" style="color:#000"></i><span>Next.js<small>Panel web</small></span></div><div><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><span>Tailwind<small>Estilos</small></span></div><div><i class="m" data-l="typescript" style="color:#3178C6"></i><span>TypeScript<small>Todo el stack</small></span></div><div><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><span>Node.js<small>Servidor</small></span></div><div><i class="m" data-l="express" style="color:#201e1d"></i><span>Express<small>API REST</small></span></div><div><i class="m" data-l="socketdotio" style="color:#201e1d"></i><span>Socket.IO<small>Chat</small></span></div><div><i class="m" data-l="prisma" style="color:#2D3748"></i><span>Prisma<small>ORM</small></span></div><div><i class="m" data-l="postgresql" style="color:#336791"></i><span>PostgreSQL<small>Base de datos</small></span></div><div><i class="m" data-l="docker" style="color:#2496ED"></i><span>Docker<small>Desarrollo</small></span></div><div><i class="m" data-l="cloudflare" style="color:#F38020"></i><span>Cloudflare R2<small>Archivos</small></span></div><div><i class="m" data-l="google" style="color:#4285F4"></i><span>Google Auth<small>Ingreso</small></span></div><div><img src="assets/vitest.svg" alt=""><span>Vitest<small>Tests</small></span></div></div>
   </section>
 
 
@@ -469,7 +471,10 @@ ICONS.clock=lu('<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>');
 ICONS['lu-shield-check']=lu('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>');
 ICONS['lu-users']=lu('<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>');
 document.querySelectorAll('[data-i]').forEach(e=>e.style.setProperty('--i',`url("${ICONS[e.dataset.i]}")`));
-document.querySelectorAll('[data-l]').forEach(e=>e.style.setProperty('--i',`url("${ICONS['logo:'+e.dataset.l]}")`));
+// Logos de marca: SVG recoloreado como imagen de fondo (vectorial). Con máscara CSS el PDF los rasteriza y deja líneas finas en los bordes.
+document.querySelectorAll('[data-l]').forEach(e=>{const c=getComputedStyle(e).color,z=e.style.webkitMaskSize||'contain';
+  e.style.webkitMask='none';e.style.mask='none';
+  e.style.background=`url("${ICONS['logo:'+e.dataset.l].replace('%3Csvg','%3Csvg fill=%22'+encodeURIComponent(c)+'%22')}") center/${z} no-repeat`;});
 // Escala cada pantalla (390 px de diseño) al ancho de su marco.
 function scaleAll(){
   document.querySelectorAll('.fit').forEach(f=>{const s=f.querySelector('.scr');const k=f.clientWidth/390;s.style.transform=`scale(${k})`;f.style.height=(s.offsetHeight*k)+'px';});
