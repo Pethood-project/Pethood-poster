@@ -35,25 +35,25 @@ i.m{display:inline-block;width:1em;height:1em;background:currentColor;-webkit-ma
 .poster{width:var(--W);height:var(--H);background:var(--bg);padding:30pt 52pt 30pt;display:flex;flex-direction:column;gap:12pt;justify-content:space-between;overflow:hidden}
 
 /* ---------- encabezado ---------- */
-.top{display:flex;justify-content:space-between;gap:20pt;font-size:14pt;font-weight:700;letter-spacing:.6pt;color:var(--a700);border-bottom:1.5pt solid var(--n300);padding-bottom:8pt}
-.top{align-items:center}.utn{height:92pt;display:block}
-.top span:last-child{color:var(--n600);font-weight:600;font-size:20pt;line-height:1.2;text-align:right;letter-spacing:.3pt}
+.top{display:flex;justify-content:space-between;gap:20pt;font-size:18pt;font-weight:700;letter-spacing:.6pt;color:var(--a700);border-bottom:1.5pt solid var(--n300);padding-bottom:8pt}
+.top{align-items:center}.utn{height:72pt;display:block}
+.top span:last-child{color:var(--n600);font-weight:600;font-size:23pt;line-height:1.2;text-align:right;letter-spacing:.3pt}
 .head{display:grid;grid-template-columns:170pt 1fr auto;gap:30pt;align-items:center}
 .logo{width:170pt;height:170pt;border-radius:32pt;background:#f2e4cc;display:grid;place-items:center;overflow:hidden}
 .logo img{width:104%}
 .brand h1{font-size:136pt;line-height:.95;color:var(--a600);letter-spacing:-1pt}
 .brand .tag{font-size:40pt;color:var(--a800);margin-top:8pt;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:5pt;text-underline-offset:8pt}
-.autores{text-align:right;font-size:16pt;line-height:1.9;font-weight:500}
-.autores small{display:block;font-size:10pt;letter-spacing:4pt;font-weight:800;color:var(--a600);margin-bottom:4pt}
-.lead{font-size:22pt;line-height:1.4;font-weight:500;max-width:1600pt}
+.autores{text-align:right;font-size:20pt;line-height:1.9;font-weight:500}
+.autores small{display:block;font-size:14pt;letter-spacing:4pt;font-weight:800;color:var(--a600);margin-bottom:4pt}
+.lead{font-size:25pt;line-height:1.35;font-weight:500}
 .card{border-radius:var(--r);padding:20pt 24pt}
 .ps{display:grid;grid-template-columns:1fr 1fr;gap:16pt}
-.ps h3{font-size:30pt;margin-bottom:6pt}
-.ps p{font-size:20pt;line-height:1.4}
+.ps h3{font-size:34pt;margin-bottom:6pt}
+.ps p{font-size:24pt;line-height:1.4}
 .pr{background:var(--surface)}.pr h3{color:var(--a600)}
 .so{background:var(--a600);color:#fff}
 h2.sec{font-size:34pt;color:var(--a600);margin:2pt 0 -2pt;display:flex;align-items:baseline;gap:14pt}
-h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:600}
+h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:600}
 
 /* ---------- teléfonos ---------- */
 .feat{display:grid;grid-template-columns:repeat(6,1fr);gap:14pt}
@@ -61,12 +61,13 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .f .ph{border-radius:24pt 24pt 0 0;overflow:hidden;background:#1d1a17;padding:6pt 6pt 0;box-shadow:0 0 0 1pt #0004}
 .f .fit{border-radius:19pt 19pt 0 0;overflow:hidden;background:var(--bg)}
 .f .cap{padding:11pt 4pt 14pt}
-.f .cap i{font-style:normal;font-size:13pt;letter-spacing:2.5pt;font-weight:800;opacity:.8;display:block;margin-bottom:3pt}
-.f .cap b{font-family:"Caprasimo",serif;font-weight:400;font-size:23pt;line-height:1.1;display:block}
+.f .cap i{font-style:normal;font-size:16pt;letter-spacing:2.5pt;font-weight:800;opacity:.8;display:block;margin-bottom:3pt}
+.f .cap b{font-family:"Caprasimo",serif;font-weight:400;font-size:25pt;line-height:1.1;display:block}
 .c1{background:var(--a600)}.c2{background:var(--a500)}.c3{background:var(--gold);color:var(--a800)}.c4{background:var(--a800)}.c5{background:var(--a600)}.c6{background:var(--a500)}
 
 /* ---------- pantallas móviles (px, base 390) — reproducen el TSX de apps/mobile ---------- */
-.scr{width:390px;height:700px;position:relative;font-family:Figtree,sans-serif;color:var(--n900);background:var(--bg);overflow:hidden;transform-origin:0 0;display:flex;flex-direction:column}
+.scr{width:390px;height:812px;position:relative;font-family:Figtree,sans-serif;color:var(--n900);background:var(--bg);overflow:hidden;transform-origin:0 0;display:flex;flex-direction:column}
+.shot{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .sb{display:flex;justify-content:space-between;padding:10px 22px 0;font-size:13px;font-weight:700;color:var(--n900);height:30px;flex:none}
 .circ{border-radius:50%;display:grid;place-items:center;flex:none}
 .bc{width:42px;height:42px;border:1px solid var(--a300);background:var(--a100);color:var(--a700);font-size:19px}
@@ -175,7 +176,7 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .btn2{background:var(--a600);color:#fff;border-radius:16px;text-align:center;padding:12px;font-size:15px;font-weight:700;margin-top:12px;display:flex;justify-content:center;gap:8px;align-items:center}
 
 /* ---------- web ---------- */
-.mid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16pt}
+.mid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16pt}
 .webw{background:var(--a500);padding:14pt;min-width:0}
 .wtxt{background:var(--a600);color:#fff}
 .web{background:var(--a500);color:#fff;display:grid;grid-template-columns:1.45fr 1fr;gap:22pt;align-items:center;padding:16pt 26pt 16pt 16pt}
@@ -241,51 +242,51 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .lg2 span{display:flex;align-items:center;gap:6px}.lg2 s{width:10px;height:10px;border-radius:50%;background:#16a34a}.lg2 s.o{width:12px;height:2px;border-radius:2px;background:#0284c7}
 .side{display:flex;min-width:0}
 .wtxt{flex:1;display:flex;flex-direction:column;padding:22pt 24pt}
-.wtxt .n{font-size:13pt;letter-spacing:2.5pt;font-weight:800;opacity:.85}
+.wtxt .n{font-size:17pt;letter-spacing:2.5pt;font-weight:800;opacity:.85}
 .wtxt h3{font-size:36pt;line-height:1.05;margin:7pt 0 10pt}
 .wtxt p{font-size:19pt;line-height:1.4}
 .wtxt ul{flex:1;list-style:none;margin:16pt 0;display:flex;flex-direction:column;gap:10pt}
-.wtxt li{flex:1;display:flex;align-items:center;gap:14pt;background:#ffffff1f;border-radius:16pt;padding:0 16pt;font-size:21pt;font-weight:700;line-height:1.2}
+.wtxt li{flex:1;display:flex;align-items:center;gap:14pt;background:#ffffff1f;border-radius:16pt;padding:0 16pt;font-size:25pt;font-weight:700;line-height:1.2}
 .wtxt li .ib{width:44pt;height:44pt;flex:none;border-radius:12pt;background:#0000002e;display:grid;place-items:center;font-size:25pt;color:var(--gold)}
 .qrs{display:flex;align-items:center;gap:16pt;background:var(--surface);color:var(--ink);border-radius:18pt;padding:12pt 16pt}
 .qrs .box{width:112pt;height:112pt;flex:none;background:#fff;border-radius:10pt;padding:6pt;border:2pt dashed var(--a400)}
 .qrs .box img{width:100%;height:100%;object-fit:contain;display:block}
 .qrs .qt{display:flex;flex-direction:column;align-items:flex-start;gap:6pt}
 .qrs b{font-size:30pt;color:var(--a600);line-height:1}
-.qrs small{font-size:20pt;color:var(--a700);font-weight:800}
-.qrs .demo{display:flex;align-items:center;gap:7pt;background:var(--a100);border:1pt solid var(--a300);color:var(--a800);border-radius:99pt;padding:5pt 12pt;font-size:14pt;font-weight:700}
+.qrs small{font-size:23pt;color:var(--a700);font-weight:800}
+.qrs .demo{display:flex;align-items:center;gap:7pt;background:var(--a100);border:1pt solid var(--a300);color:var(--a800);border-radius:99pt;padding:5pt 12pt;font-size:17pt;font-weight:700}
 
 /* ---------- tecnologías ---------- */
 .tec{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 26pt}
 .tec h2{margin-bottom:12pt}
 .tl{display:flex;justify-content:space-between;gap:8pt}
-.tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:10pt;font-size:20pt;font-weight:700;text-align:center;line-height:1.15}
-.tl i.m{font-size:84pt}
+.tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:8pt;font-size:24pt;font-weight:700;text-align:center;line-height:1.15}
+.tl i.m{font-size:62pt}
 .tl img{width:84pt;height:84pt;object-fit:contain}
-.tl small{display:block;font-size:15pt;font-weight:600;color:var(--n600);margin-top:1pt}
+.tl small{display:block;font-size:18pt;font-weight:600;color:var(--n600);margin-top:1pt}
 
 /* ---------- arquitectura ---------- */
 .arq{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 18pt}
 .arq h2{margin-bottom:10pt}
 .ar{display:grid;grid-template-columns:minmax(0,1fr) 130pt minmax(0,1.7fr) 110pt minmax(0,1fr);align-items:stretch}
-.col{border-radius:18pt;padding:14pt 16pt;display:flex;flex-direction:column;gap:12pt}
-.col>small{font-size:13pt;letter-spacing:3.5pt;font-weight:800}
+.col{border-radius:18pt;padding:12pt 14pt;display:flex;flex-direction:column;gap:10pt}
+.col>small{font-size:17pt;letter-spacing:3.5pt;font-weight:800}
 .cl{background:#fbe6af80;border:1.5pt solid var(--amarillo)}.cl>small{color:var(--a700)}
 .be{background:#2b2620;color:#fff}.be>small{color:var(--gold)}
 .da{background:var(--a800);color:#fff}.da>small{color:var(--amarillo)}
-.ic{flex:1;display:flex;align-items:center;gap:14pt;background:#fff;color:var(--ink);border-radius:16pt;padding:18pt 18pt}
+.ic{flex:1;display:flex;align-items:center;gap:14pt;background:#fff;color:var(--ink);border-radius:16pt;padding:12pt 16pt}
 .ic .ib{width:54pt;height:54pt;flex:none;border-radius:14pt;background:var(--a100);display:grid;place-items:center;font-size:32pt}
-.ic b{display:block;font-size:21pt;line-height:1.15}
-.ic em{display:block;font-style:normal;font-size:15pt;color:var(--n600);margin-top:2pt;font-weight:500}
+.ic b{display:block;font-size:24pt;line-height:1.15}
+.ic em{display:block;font-style:normal;font-size:18pt;color:var(--n600);margin-top:2pt;font-weight:500}
 .ic.g{border:1.5pt solid #4285F4}.ic.g .ib{background:#e8f0fe}
 .be .ic,.da .ic{background:#ffffff14;color:#fff;border:1pt solid #ffffff1f}
 .be .ic .ib,.da .ic .ib{background:#ffffff1a}
 .be .ic em,.da .ic em{color:#ffffffb3}
 .r3{flex:1.1;display:grid;grid-template-columns:repeat(3,1fr);gap:12pt}
 .r3 .ic{flex-direction:column;justify-content:center;text-align:center;gap:8pt}
-.r3 .ic b{font-size:19pt}
-.extra{background:#4285F4;color:#fff;border-radius:99pt;font-size:11pt;letter-spacing:1.5pt;font-weight:800;padding:2pt 9pt;margin-left:auto;align-self:flex-start}
-.lnk{display:flex;flex-direction:column;padding:36pt 0 0;font-size:14pt;font-weight:800;text-align:center;color:var(--a700);line-height:1.2}
+.r3 .ic b{font-size:22pt}
+.extra{background:#4285F4;color:#fff;border-radius:99pt;font-size:14pt;letter-spacing:1.5pt;font-weight:800;padding:2pt 9pt;margin-left:auto;align-self:flex-start}
+.lnk{display:flex;flex-direction:column;padding:36pt 0 0;font-size:17pt;font-weight:800;text-align:center;color:var(--a700);line-height:1.2}
 .lnk div{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative}
 .lnk div:before{content:"";display:block;order:2;border-top:3pt solid var(--a600);margin:4pt 0 0}
 .lnk div:after{content:"";position:absolute;right:-1pt;top:calc(50% + 2pt);border:7pt solid transparent;border-left:10pt solid var(--a600);border-right:0;margin-top:-1pt}
@@ -296,15 +297,15 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14pt}
 .kpi{background:var(--surface);border-radius:var(--r);padding:9pt 14pt;text-align:center}
 .kpi b{display:block;font-family:"Caprasimo",serif;font-weight:400;font-size:34pt;line-height:1;color:var(--a600)}
-.kpi span{font-size:13pt;font-weight:600;color:var(--n600)}
+.kpi span{font-size:17pt;font-weight:600;color:var(--n600)}
 .kpi.dark{background:var(--a600);color:#fff}.kpi.dark b{color:#fff}.kpi.dark span{color:#fbe6d6}
 .foot{margin:auto -52pt 0;background:var(--surface);padding:16pt 52pt;display:flex;justify-content:center;border-top:1pt solid #e4d8c4}
 .team{display:flex;gap:22pt;justify-content:flex-end}
 .team figure{text-align:center;width:118pt}
 .team img{width:96pt;height:96pt;border-radius:50%;object-fit:cover;border:3pt solid var(--a500);display:block;margin:0 auto 4pt}
-.team figcaption{font-size:15pt;font-weight:700;line-height:1.15}
+.team figcaption{font-size:18pt;font-weight:700;line-height:1.15}
 .year{font-size:38pt;color:var(--a600);line-height:.95;text-align:right}
-.year small{display:block;font-family:Figtree;font-size:13pt;font-weight:600;color:var(--ink);margin-top:3pt}
+.year small{display:block;font-family:Figtree;font-size:17pt;font-weight:600;color:var(--ink);margin-top:3pt}
 /* diseño 1800×2700pt → hoja 60×90 cm: 600mm/1800pt = 0.94488 */
 @media print{ html{background:var(--bg);zoom:.94488} body{height:auto!important} #wrap{transform:none!important} }
 </style>
@@ -313,7 +314,7 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 <div id="wrap">
 <main class="poster">
 
-  <div class="top"><img class="utn" src="assets/utn.png" alt="UTN Mendoza · Universidad Tecnológica Nacional"><span>20.ª Exposición Anual de Proyectos de Sistemas<br>Ingeniería en Sistemas de Información<br>Cátedra: Proyecto Final<br>Noviembre de 2026</span></div>
+  <div class="top"><img class="utn" src="assets/utn.png" alt="UTN Mendoza · Universidad Tecnológica Nacional"><span>20.ª Exposición Anual de Proyectos de Sistemas · Noviembre de 2026<br>Ingeniería en Sistemas de Información · Cátedra: Proyecto Final</span></div>
 
   <header class="head">
     <div class="logo"><img src="assets/logo.png" alt="PetHood"></div>
@@ -337,58 +338,17 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
 
   <h2 class="sec t">Algunas funciones</h2>
   <section class="feat">
-    <article class="f c1"><div class="ph"><div class="fit"><div class="scr" id="s1"><div class="sb"><span>9:41</span><span></span></div>
-      <div class="ad-h"><b>Adoptar</b><div class="r"><div class="circ bc"><i class="m" data-i="heart-outline"></i></div><div class="circ bc"><i class="m" data-i="options-outline"></i></div></div></div>
-      <div class="deck"><div class="k k2"></div><div class="k k1"></div><div class="ad-card"><img src="assets/puppy.jpg" alt=""><div class="n">1 de 3</div>
-        <div class="b"><h4>Toby</h4><p>2 años · Mediano · Macho</p><span class="chip">Juguetón</span><span class="chip">Cariñoso</span><span class="chip">Tranquilo</span></div></div></div>
-      <div class="ad-act"><div class="circ" style="width:58px;height:58px;background:var(--n100);border:1px solid var(--n300);color:var(--n700);font-size:25px"><i class="m" data-i="close"></i></div><div class="circ" style="width:70px;height:70px;background:var(--a600);color:#fff;font-size:30px;box-shadow:0 8px 18px #6433124d"><i class="m" data-i="heart"></i></div></div>
-      <div class="sp"></div><div class="tabs"><div><i class="m" data-i="home-outline"></i>Inicio</div><div><i class="m" data-i="paw-outline"></i>Mascotas</div><div class="cen"><div class="mid act"><i class="m" data-i="paw"></i></div></div><div><i class="m" data-i="chatbubble-outline"></i>Chat</div><div><i class="m" data-i="person-outline"></i>Perfil</div></div>
-    </div></div></div><div class="cap"><i>01</i><b>Deslizá y encontrá a tu compañero</b></div></article>
-    <article class="f c2"><div class="ph"><div class="fit"><div class="scr" id="s2"><div class="sb" style="background:var(--a600);color:#fff"><span>9:41</span><span></span></div>
-      <div class="hd6"><div class="bk"><i class="m" data-i="chevron-back"></i></div><div><h4>Subir actualización</h4><small>Toby · Seguimiento</small></div></div>
-      <div class="pad">
-        <div class="chipd"><i class="m" data-i="calendar"></i>Pedido 3 · te quedan 47 horas</div>
-        <div class="q"><small>Pregunta</small><h5>¿Sale a pasear con regularidad y a qué horas del día?</h5></div>
-        <div class="fc">
-          <div class="fr"><div class="lb">Tu respuesta <b>*</b></div><div class="tx2">Sale dos veces al día, a la mañana y a la tarde.</div><div class="ct">49 / 1000</div></div>
-          <div class="fr"><div class="lb s">Foto de prueba <b>*</b></div><div class="foto"><i class="m" data-i="camera"></i>Sacar foto ahora</div><div class="ayu">Tiene que ser una foto sacada en el momento con la cámara. No se puede elegir una de la galería.</div></div>
-        </div>
-        <div class="btn">Guardar respuesta</div>
-      </div>
-    </div></div></div><div class="cap"><i>02</i><b>Sabé cómo está, sin perseguir a nadie</b></div></article>
-    <article class="f c3"><div class="ph"><div class="fit"><div class="scr" id="s3"><div class="sb"><span>9:41</span><span></span></div>
-      <div class="hd7"><div class="bk"><i class="m" data-i="arrow-back"></i></div><div><h4>Historia Clínica</h4><small>Toby · Perro</small></div></div>
-      <div style="height:16px;flex:none"></div>
-      <div class="reg"><div class="s" style="background:#e3f0dc;color:#3d7a34"><i class="m" data-i="needle"></i></div><div class="c"><b>Vacuna antirrábica</b><span>Fecha visita: 10/04/2026</span><div class="fl"><div style="color:var(--a700)"><i class="m" data-i="checkmark-circle"></i>Requiere revisión</div><div style="color:#3d7a34"><i class="m" data-i="shield-checkmark-outline"></i>Vacuna</div></div></div><div class="ch"><i class="m" data-i="chevron-forward"></i></div></div>
-      <div class="reg"><div class="s" style="background:var(--amarilloClaro);color:#7a5a10"><i class="m" data-i="needle"></i></div><div class="c"><b>Vacuna múltiple</b><span>Fecha visita: 22/02/2026</span><div class="fl"><div style="color:#7a5a10"><i class="m" data-i="shield-checkmark-outline"></i>Vacuna</div></div></div><div class="ch"><i class="m" data-i="chevron-forward"></i></div></div>
-      <div class="reg"><div class="s" style="background:var(--a600);color:#fff"><i class="m" data-i="document-text"></i></div><div class="c"><b>Control de peso</b><span>Fecha visita: 05/01/2026</span></div><div class="ch"><i class="m" data-i="chevron-forward"></i></div></div>
-      <div class="reg"><div class="s" style="background:var(--n200);color:var(--n400)"><i class="m" data-i="medical-outline"></i></div><div class="c"><b>Consulta general</b><span>Fecha visita: 12/12/2025</span></div><div class="ch"><i class="m" data-i="chevron-forward"></i></div></div>
-      <div class="fab" style="width:72px;height:72px;font-size:38px"><i class="m" data-i="add"></i></div>
-    </div></div></div><div class="cap"><i>03</i><b>Su salud, siempre a mano</b></div></article>
-    <article class="f c4"><div class="ph"><div class="fit"><div class="scr" id="s4"><div class="sb"><span>9:41</span><span></span></div>
-      <div class="hd8"><i class="m" data-i="arrow-back" style="font-size:24px;color:var(--n700)"></i><div class="av">RE</div><div style="min-width:0"><b>Refugio Esperanza</b><small>Solicitud #12 · Toby</small></div></div>
-      <div class="msgs">
-        <div class="sol"><small>PetHood · 10:21</small><div class="cd"><span class="bd">Pendiente</span><h6>Solicitud de adopción · Toby</h6><p>Enviada el 12/09/2026 · Perro · 2 años</p><div class="ph2"><img src="assets/puppy.jpg" alt=""></div><div class="vb">Ver mi solicitud</div></div></div>
-        <div class="bu o">Hola, ¡quiero adoptar a Toby!<em>10:22 <i class="m" data-i="checkmark-done"></i></em></div>
-        <div class="bu r">¡Hola! Contanos un poco de tu casa.<em>10:24</em></div>
-      </div>
-      <div class="inp"><i class="m" data-i="add" style="font-size:24px;color:var(--a700)"></i><div class="f">Escribí un mensaje...</div><div class="circ"><i class="m" data-i="send"></i></div></div>
-    </div></div></div><div class="cap"><i>04</i><b>Hablá con el refugio en tiempo real</b></div></article>
-    <article class="f c5"><div class="ph"><div class="fit"><div class="scr" id="s5"><div class="sb"><span>9:41</span><span></span></div>
-      <div class="hd9"><div class="circ bcg"><i class="m" data-i="arrow-back"></i></div><b>Mascotas Perdidas</b></div>
-      <div class="grid2">
-        <div class="av2"><div class="im"><img src="assets/cat.jpg" alt=""><span style="background:var(--amarilloClaro);color:var(--a800)">Perdido</span></div><div class="tx"><b>Michi</b><small>Gato · Ayer</small></div></div>
-        <div class="av2"><div class="im"><img src="assets/siamese.jpg" alt=""><span style="background:var(--n100);color:var(--a800)">Encontrado</span></div><div class="tx"><b>Sin nombre</b><small>Gato · Hoy</small></div></div>
-        <div class="av2"><div class="im"><img src="assets/puppy.jpg" alt=""><span style="background:var(--n200);color:var(--n600)">Resuelto</span></div><div class="tx"><b>Bruno</b><small>Perro · 3 días</small></div></div>
-        <div class="av2"><div class="im"><img src="assets/adopt.jpg" alt=""><span style="background:var(--amarilloClaro);color:var(--a800)">Perdido</span></div><div class="tx"><b>Luna</b><small>Perro · 5 días</small></div></div>
-      </div>
-      <div class="fab" style="width:68px;height:68px;font-size:34px"><i class="m" data-i="add"></i></div>
-    </div></div></div><div class="cap"><i>05</i><b>Ayudá a que vuelvan a casa</b></div></article>
+    <article class="f c1"><div class="ph"><div class="fit"><div class="scr" id="s1"><img class="shot" src="assets/app-adoptar.jpg" alt=""></div></div></div><div class="cap"><i>01</i><b>Deslizá y encontrá a tu compañero</b></div></article>
+    <article class="f c2"><div class="ph"><div class="fit"><div class="scr" id="s2"><img class="shot" src="assets/app-seguimiento.jpg" alt=""></div></div></div><div class="cap"><i>02</i><b>Sabé cómo está, sin perseguir a nadie</b></div></article>
+    <article class="f c3"><div class="ph"><div class="fit"><div class="scr" id="s3"><img class="shot" src="assets/app-historia.jpg" alt=""></div></div></div><div class="cap"><i>03</i><b>Su salud, siempre a mano</b></div></article>
+    <article class="f c4"><div class="ph"><div class="fit"><div class="scr" id="s4"><img class="shot" src="assets/app-chat.jpg" alt=""></div></div></div><div class="cap"><i>04</i><b>Hablá con el refugio en tiempo real</b></div></article>
+    <article class="f c5"><div class="ph"><div class="fit"><div class="scr" id="s5"><img class="shot" src="assets/app-perdidas.jpg" alt=""></div></div></div><div class="cap"><i>05</i><b>Ayudá a que vuelvan a casa</b></div></article>
     <article class="f c6"><div class="ph"><div class="fit"><div class="scr" id="s6"><div class="sb"><span>9:41</span><span></span></div>
       <div class="hd9"><div class="circ bcg"><i class="m" data-i="arrow-back"></i></div><b>Campañas</b></div>
       <div style="height:16px;flex:none"></div>
       <div class="cp"><div class="im"><img src="assets/refugio.jpg" alt=""></div><div class="tx"><small>Refugio Esperanza</small><b>Nuevo espacio para cachorros</b><div class="pg"><s style="width:57%"></s></div><div class="mt"><span>Recaudado: $1.430.000</span><span>Meta: $2.500.000</span></div><div class="btn2"><i class="m" data-i="heart"></i>Donar ahora</div></div></div>
       <div class="cp"><div class="im" style="height:74px"><img src="assets/adopt.jpg" alt="" style="object-position:center 30%"></div><div class="tx"><small>Protectora Animal</small><b>Alimentos para el invierno</b><div class="pg"><s style="width:64%"></s></div></div></div>
+      <div class="cp"><div class="im" style="height:74px"><img src="assets/cat.jpg" alt="" style="object-position:center 30%"></div><div class="tx"><small>Hogar Patitas</small><b>Vacunación para 40 rescatados</b><div class="pg"><s style="width:38%"></s></div></div></div>
     </div></div></div><div class="cap"><i>06</i><b>Ayudá con transparencia</b></div></article>
   </section>
 
@@ -411,14 +371,13 @@ h2.sec small{font-family:Figtree;font-size:13pt;color:var(--n600);font-weight:60
         </main></div></div></div></div></div>
     <div class="side">
       <div class="card wtxt">
-        <div class="n">DASHBOARDS · MODERACIÓN · CSV</div>
-        <h3 class="t">Todos tus animales en un solo lugar</h3>
-        <p>Panel de escritorio para refugios verificados y administración.</p>
+        <div class="n">OBJETIVOS DEL PROYECTO</div>
+        <h3 class="t">Qué queremos lograr</h3>
         <ul>
-          <li><span class="ib"><i class="m" data-i="lu-layout-dashboard"></i></span>KPIs por período y exportación CSV</li>
-          <li><span class="ib"><i class="m" data-i="lu-building-2"></i></span>Validación de refugios y usuarios</li>
-          <li><span class="ib"><i class="m" data-i="lu-clipboard-list"></i></span>Solicitudes y publicaciones</li>
-          <li><span class="ib"><i class="m" data-i="lu-megaphone"></i></span>Consultas, FAQs y catálogos</li>
+          <li><span class="ib"><i class="m" data-i="lu-heart-handshake"></i></span>Centralizar la adopción responsable en una sola plataforma</li>
+          <li><span class="ib"><i class="m" data-i="lu-clipboard-list"></i></span>Dar trazabilidad: solicitudes, historia clínica y seguimiento</li>
+          <li><span class="ib"><i class="m" data-i="lu-megaphone"></i></span>Reunir mascotas perdidas y apoyar campañas con transparencia</li>
+          <li><span class="ib"><i class="m" data-i="lu-layout-dashboard"></i></span>Dar a refugios y administración un panel de gestión</li>
         </ul>
         <div class="qrs">
           <div class="box"><img src="assets/qr.svg" alt=""></div>
