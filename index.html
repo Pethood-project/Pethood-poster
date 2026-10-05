@@ -32,7 +32,7 @@ body{font-family:"Figtree",system-ui,sans-serif;color:var(--ink);-webkit-print-c
 .t{font-family:"Caprasimo",Georgia,serif;font-weight:400}
 i.m{display:inline-block;width:1em;height:1em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;vertical-align:-.125em;flex:none}
 #wrap{transform-origin:top left}
-.poster{width:var(--W);height:var(--H);background:var(--bg);padding:30pt 52pt 30pt;display:flex;flex-direction:column;gap:12pt;justify-content:space-between;overflow:hidden}
+.poster{width:var(--W);height:var(--H);background:var(--bg);padding:30pt 52pt 30pt;display:flex;flex-direction:column;gap:10pt;justify-content:space-between;overflow:hidden}
 
 /* ---------- encabezado ---------- */
 .top{display:flex;justify-content:space-between;gap:20pt;font-size:18pt;font-weight:700;letter-spacing:.6pt;color:var(--a700);border-bottom:1.5pt solid var(--n300);padding-bottom:8pt}
@@ -257,13 +257,13 @@ h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:60
 .qrs .demo{display:flex;align-items:center;gap:7pt;background:var(--a100);border:1pt solid var(--a300);color:var(--a800);border-radius:99pt;padding:5pt 12pt;font-size:17pt;font-weight:700}
 
 /* ---------- tecnologías ---------- */
-.tec{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 26pt}
-.tec h2{margin-bottom:12pt}
+.tec{background:var(--surface);border-radius:var(--r);padding:12pt 22pt 12pt}
+.tec h2{margin-bottom:6pt}
 .tl{display:flex;justify-content:space-between;gap:8pt}
-.tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:8pt;font-size:24pt;font-weight:700;text-align:center;line-height:1.15}
-.tl i.m{font-size:62pt}
-.tl img{width:84pt;height:84pt;object-fit:contain}
-.tl small{display:block;font-size:18pt;font-weight:600;color:var(--n600);margin-top:1pt}
+.tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:5pt;font-size:22pt;font-weight:700;text-align:center;line-height:1.15}
+.tl i.m{font-size:50pt}
+.tl img{width:56pt;height:56pt;object-fit:contain}
+.tl small{display:block;font-size:17pt;font-weight:600;color:var(--n600);margin-top:1pt}
 
 /* ---------- arquitectura ---------- */
 .arq{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 18pt}
@@ -299,7 +299,8 @@ h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:60
 .kpi b{display:block;font-family:"Caprasimo",serif;font-weight:400;font-size:34pt;line-height:1;color:var(--a600)}
 .kpi span{font-size:17pt;font-weight:600;color:var(--n600)}
 .kpi.dark{background:var(--a600);color:#fff}.kpi.dark b{color:#fff}.kpi.dark span{color:#fbe6d6}
-.foot{margin:auto -52pt 0;background:var(--surface);padding:16pt 52pt;display:flex;justify-content:center;border-top:1pt solid #e4d8c4}
+.foot{margin:0 -52pt -30pt;background:var(--surface);padding:9pt 52pt;text-align:center;font-size:19pt;font-weight:600;color:var(--n700);border-top:1.5pt solid var(--n300)}
+.foot b{color:var(--a700);font-weight:800;letter-spacing:1.5pt;margin-right:10pt}
 .team{display:flex;gap:22pt;justify-content:flex-end}
 .team figure{text-align:center;width:118pt}
 .team img{width:96pt;height:96pt;border-radius:50%;object-fit:cover;border:3pt solid var(--a500);display:block;margin:0 auto 4pt}
@@ -417,7 +418,7 @@ h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:60
     <div class="tl"><div><i class="m" data-l="expo" style="color:#000020;-webkit-mask-size:76%;mask-size:76%"></i><span>Expo<small>App móvil</small></span></div><div><i class="m" data-l="react" style="color:#61DAFB"></i><span>React Native<small>App móvil</small></span></div><div><i class="m" data-l="nextdotjs" style="color:#000"></i><span>Next.js<small>Panel web</small></span></div><div><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><span>Tailwind<small>Estilos</small></span></div><div><i class="m" data-l="typescript" style="color:#3178C6"></i><span>TypeScript<small>Todo el stack</small></span></div><div><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><span>Node.js<small>Servidor</small></span></div><div><i class="m" data-l="express" style="color:#201e1d"></i><span>Express<small>API REST</small></span></div><div><i class="m" data-l="socketdotio" style="color:#201e1d"></i><span>Socket.IO<small>Chat</small></span></div><div><i class="m" data-l="prisma" style="color:#2D3748"></i><span>Prisma<small>ORM</small></span></div><div><i class="m" data-l="postgresql" style="color:#336791"></i><span>PostgreSQL<small>Base de datos</small></span></div><div><i class="m" data-l="docker" style="color:#2496ED"></i><span>Docker<small>Desarrollo</small></span></div><div><i class="m" data-l="cloudflare" style="color:#F38020"></i><span>Cloudflare R2<small>Archivos</small></span></div><div><i class="m" data-l="google" style="color:#4285F4"></i><span>Google Auth<small>Ingreso</small></span></div><div><img src="assets/vitest.svg" alt=""><span>Vitest<small>Tests</small></span></div></div>
   </section>
 
-
+  <footer class="foot"><b>EQUIPO DE CÁTEDRA</b>Dr. Ing. Raúl Moralejo · Lic. Gustavo Manino · Ing. Malena Casas Castrillejo · Ing. María Teresita Cuccia · Ing. Gonzalo Pozzoli · Ing. Erica Caro</footer>
 </main>
 </div>
 <script src="assets/icons.js"></script>
