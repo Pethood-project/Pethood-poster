@@ -259,11 +259,11 @@ h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:60
 /* ---------- tecnologías ---------- */
 .tec{background:var(--surface);border-radius:var(--r);padding:12pt 22pt 12pt}
 .tec h2{margin-bottom:6pt}
-.tl{display:flex;justify-content:space-between;gap:8pt}
-.tl div{flex:1;display:flex;flex-direction:column;align-items:center;gap:5pt;font-size:22pt;font-weight:700;text-align:center;line-height:1.15}
-.tl i.m{font-size:50pt}
-.tl img{width:56pt;height:56pt;object-fit:contain}
-.tl small{display:block;font-size:17pt;font-weight:600;color:var(--n600);margin-top:1pt}
+.tl{display:flex;justify-content:space-between;gap:4pt}
+.tl div{flex:auto;display:flex;flex-direction:column;align-items:center;gap:5pt;font-size:18pt;font-weight:700;text-align:center;line-height:1.15;white-space:nowrap}
+.tl i.m{font-size:40pt}
+.tl img{width:40pt;height:40pt;object-fit:contain}
+.tl small{display:block;font-size:14pt;font-weight:600;color:var(--n600);margin-top:1pt}
 
 /* ---------- arquitectura ---------- */
 .arq{background:var(--surface);border-radius:var(--r);padding:14pt 22pt 18pt}
@@ -282,16 +282,27 @@ h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:60
 .be .ic,.da .ic{background:#ffffff14;color:#fff;border:1pt solid #ffffff1f}
 .be .ic .ib,.da .ic .ib{background:#ffffff1a}
 .be .ic em,.da .ic em{color:#ffffffb3}
+.host{display:inline-flex;align-items:center;gap:6pt;margin-top:4pt;padding:2pt 11pt 2pt 8pt;border-radius:99pt;background:var(--a100);color:var(--a800);font-size:15pt;font-weight:800;line-height:1.2}
+.host i.m{font-size:18pt}
+.be .host,.da .host{background:#ffffff1f;color:#fff}
 .r3{flex:1.1;display:grid;grid-template-columns:repeat(3,1fr);gap:12pt}
 .r3 .ic{flex-direction:column;justify-content:center;text-align:center;gap:8pt}
 .r3 .ic b{font-size:22pt}
+/* arquitectura compacta: 4 clientes en el alto original */
+.arq .col{gap:6pt;padding:8pt 12pt}.arq .ic{padding:6pt 12pt;gap:12pt}.arq .ic .ib{width:42pt;height:42pt;font-size:25pt}.arq .ic b{font-size:22pt}.arq .ic em{font-size:16pt}.arq .r3 .ic b{font-size:20pt}
+.ic.mp{border-color:#00B1EA}.ic.mp .ib{background:#e0f6fd}
+.izq{display:flex;flex-direction:column}.izq .col{flex:none}.izq .cl{flex:1}
+.ex{border:1.5pt dashed var(--a400)}.arq .ex{padding:6pt 12pt;gap:5pt}.ex>small{color:var(--a700)}
+.vl{display:flex;align-items:center;justify-content:center;gap:10pt;height:24pt;font-size:14pt;font-weight:800;color:var(--a700)}
+.vl:before{content:"";align-self:stretch;border-left:3pt dashed var(--a600)}
 .extra{background:#4285F4;color:#fff;border-radius:99pt;font-size:14pt;letter-spacing:1.5pt;font-weight:800;padding:2pt 9pt;margin-left:auto;align-self:flex-start}
-.lnk{display:flex;flex-direction:column;padding:36pt 0 0;font-size:17pt;font-weight:800;text-align:center;color:var(--a700);line-height:1.2}
-.lnk div{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative}
-.lnk div:before{content:"";display:block;order:2;border-top:3pt solid var(--a600);margin:4pt 0 0}
-.lnk div:after{content:"";position:absolute;right:-1pt;top:calc(50% + 2pt);border:7pt solid transparent;border-left:10pt solid var(--a600);border-right:0;margin-top:-1pt}
-.lnk div.ws:before{border-top-style:dashed}
-.lnk div{margin-top:0}
+.lnk{position:relative;font-size:17pt;font-weight:800;text-align:center;color:var(--a700);line-height:1.2}
+/* Cada flecha se ancla al centro de su tarjeta (ver alinearFlechas): la línea queda en el borde inferior del div. */
+.lnk div{position:absolute;left:0;right:0;transform:translateY(-100%)}
+.lnk div:after{content:"";display:block;border-top:3pt solid var(--a600);margin-top:4pt}
+.lnk div:before{content:"";position:absolute;right:-1pt;bottom:-5.5pt;border:7pt solid transparent;border-left:10pt solid var(--a600);border-right:0}
+/* Socket.IO arranca en la tarjeta mobile: cruza el padding (12pt) y el borde (1.5pt) del bloque Clientes. */
+.lnk div.ws:after{border-top-style:dashed;margin-left:-13.5pt}
 
 /* ---------- KPIs / pie ---------- */
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14pt}
@@ -391,31 +402,37 @@ h2.sec small{font-family:Figtree;font-size:17pt;color:var(--n600);font-weight:60
   <section class="arq">
     <h2 class="sec t">Arquitectura</h2>
     <div class="ar">
-      <div class="col cl"><small>CLIENTES</small>
-        <div class="ic"><span class="ib" style="color:#000020"><i class="m" data-i="smartphone"></i></span><div><b>Cliente mobile</b><em>Expo · React Native</em></div></div>
-        <div class="ic"><span class="ib" style="color:#000"><i class="m" data-i="monitor"></i></span><div><b>Cliente web</b><em>Next.js · panel de refugios y admin</em></div></div>
-        <div class="ic g"><span class="ib" style="color:#4285F4"><i class="m" data-l="google"></i></span><div><b>Google Auth</b><em>Ingreso con Google</em></div><span class="extra">EXTRA</span></div>
+      <div class="izq">
+        <div class="col cl"><small>CLIENTES</small>
+          <div class="ic" id="a-mob"><span class="ib" style="color:#000020"><i class="m" data-i="smartphone"></i></span><div><b>Cliente mobile</b><em>Expo · React Native</em><span class="host"><i class="m" data-l="githubactions"></i>APK con GitHub Actions</span></div></div>
+          <div class="ic"><span class="ib" style="color:#000"><i class="m" data-i="monitor"></i></span><div><b>Cliente web</b><em>Next.js · refugios y admin</em><span class="host"><i class="m" data-l="vercel"></i>En Vercel</span></div></div>
+        </div>
+        <div class="vl">Login y pago desde los clientes</div>
+        <div class="col ex"><small>EXTRAS</small>
+          <div class="ic g" id="a-goo"><span class="ib" style="color:#4285F4"><i class="m" data-l="google"></i></span><div><b>Google Auth</b><em>Ingreso con Google</em></div></div>
+          <div class="ic g mp" id="a-mp"><span class="ib" style="color:#00B1EA"><i class="m" data-l="mercadopago"></i></span><div><b>MercadoPago</b><em>Donaciones a campañas</em></div></div>
+        </div>
       </div>
-      <div class="lnk"><div>HTTPS<br>+ JWT</div><div class="ws">Socket.IO<br>(móvil)</div><div>ID token<br>de Google</div></div>
+      <div class="lnk"><div data-a=".cl" style="margin-top:44pt">HTTPS<br>+ JWT</div><div class="ws" data-a="#a-mob">Socket.IO<br>chats</div><div data-a="#a-goo">Valida el<br>ID token</div><div data-a="#a-mp">Webhook<br>de pago</div></div>
       <div class="col be"><small>SERVIDOR</small>
-        <div class="ic"><span class="ib" style="color:#fff"><i class="m" data-l="express"></i></span><div><b>API REST /api/v1</b><em>Node · Express 5 · TypeScript · Zod · JWT</em></div></div>
+        <div class="ic"><span class="ib" style="color:#fff"><i class="m" data-l="express"></i></span><div><b>API REST /api/v1</b><em>Node · Express 5 · TypeScript · Zod · JWT</em><span class="host"><i class="m" data-l="render"></i>En Render</span></div></div>
         <div class="r3">
           <div class="ic"><span class="ib" style="color:#fff"><i class="m" data-l="socketdotio"></i></span><div><b>WebSocket</b><em>Chat y presencia</em></div></div>
           <div class="ic"><span class="ib" style="color:var(--gold)"><i class="m" data-i="clock"></i></span><div><b>Crones</b><em>Solicitudes y campañas</em></div></div>
           <div class="ic"><span class="ib" style="color:var(--amarillo)"><i class="m" data-i="image-outline"></i></span><div><b>Imágenes</b><em>Compresión con sharp</em></div></div>
         </div>
       </div>
-      <div class="lnk"><div>Prisma</div><div>S3 API</div></div>
+      <div class="lnk"><div data-a="#a-pg">Prisma</div><div data-a="#a-r2">S3 API</div></div>
       <div class="col da"><small>DATOS</small>
-        <div class="ic"><span class="ib" style="color:#7fa2ff"><i class="m" data-l="postgresql"></i></span><div><b>PostgreSQL</b><em>Bajas lógicas y auditoría</em></div></div>
-        <div class="ic"><span class="ib" style="color:#F38020"><i class="m" data-l="cloudflare"></i></span><div><b>Cloudflare R2</b><em>Archivos (o disco local)</em></div></div>
+        <div class="ic" id="a-pg"><span class="ib" style="color:#7fa2ff"><i class="m" data-l="postgresql"></i></span><div><b>PostgreSQL</b><em>Base de datos relacional</em><span class="host"><i class="m" data-l="neon"></i>En Neon</span></div></div>
+        <div class="ic" id="a-r2"><span class="ib" style="color:#F38020"><i class="m" data-l="cloudflare"></i></span><div><b>Cloudflare R2</b><em>Servidor de archivos</em><span class="host"><i class="m" data-l="cloudflare"></i>Fotos, videos y documentos</span></div></div>
       </div>
     </div>
   </section>
 
   <section class="tec">
     <h2 class="sec t">Tecnologías</h2>
-    <div class="tl"><div><i class="m" data-l="expo" style="color:#000020;-webkit-mask-size:76%;mask-size:76%"></i><span>Expo<small>App móvil</small></span></div><div><i class="m" data-l="react" style="color:#61DAFB"></i><span>React Native<small>App móvil</small></span></div><div><i class="m" data-l="nextdotjs" style="color:#000"></i><span>Next.js<small>Panel web</small></span></div><div><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><span>Tailwind<small>Estilos</small></span></div><div><i class="m" data-l="typescript" style="color:#3178C6"></i><span>TypeScript<small>Todo el stack</small></span></div><div><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><span>Node.js<small>Servidor</small></span></div><div><i class="m" data-l="express" style="color:#201e1d"></i><span>Express<small>API REST</small></span></div><div><i class="m" data-l="socketdotio" style="color:#201e1d"></i><span>Socket.IO<small>Chat</small></span></div><div><i class="m" data-l="prisma" style="color:#2D3748"></i><span>Prisma<small>ORM</small></span></div><div><i class="m" data-l="postgresql" style="color:#336791"></i><span>PostgreSQL<small>Base de datos</small></span></div><div><i class="m" data-l="docker" style="color:#2496ED"></i><span>Docker<small>Desarrollo</small></span></div><div><i class="m" data-l="cloudflare" style="color:#F38020"></i><span>Cloudflare R2<small>Archivos</small></span></div><div><i class="m" data-l="google" style="color:#4285F4"></i><span>Google Auth<small>Ingreso</small></span></div><div><img src="assets/vitest.svg" alt=""><span>Vitest<small>Tests</small></span></div></div>
+    <div class="tl"><div><i class="m" data-l="expo" style="color:#000020;-webkit-mask-size:76%;mask-size:76%"></i><span>Expo<small>App móvil</small></span></div><div><i class="m" data-l="react" style="color:#61DAFB"></i><span>React Native<small>App móvil</small></span></div><div><i class="m" data-l="nextdotjs" style="color:#000"></i><span>Next.js<small>Panel web</small></span></div><div><i class="m" data-l="tailwindcss" style="color:#06B6D4"></i><span>Tailwind<small>Estilos</small></span></div><div><i class="m" data-l="typescript" style="color:#3178C6"></i><span>TypeScript<small>Todo el stack</small></span></div><div><i class="m" data-l="nodedotjs" style="color:#5FA04E"></i><span>Node.js<small>Servidor</small></span></div><div><i class="m" data-l="express" style="color:#201e1d"></i><span>Express<small>API REST</small></span></div><div><i class="m" data-l="socketdotio" style="color:#201e1d"></i><span>Socket.IO<small>Chat</small></span></div><div><i class="m" data-l="prisma" style="color:#2D3748"></i><span>Prisma<small>ORM</small></span></div><div><i class="m" data-l="postgresql" style="color:#336791"></i><span>PostgreSQL<small>Base de datos</small></span></div><div><i class="m" data-l="docker" style="color:#2496ED"></i><span>Docker<small>Desarrollo</small></span></div><div><i class="m" data-l="cloudflare" style="color:#F38020"></i><span>Cloudflare R2<small>Archivos</small></span></div><div><i class="m" data-l="google" style="color:#4285F4"></i><span>Google Auth<small>Ingreso</small></span></div><div><i class="m" data-l="mercadopago" style="color:#00B1EA"></i><span>MercadoPago<small>Donaciones</small></span></div><div><img src="assets/vitest.svg" alt=""><span>Vitest<small>Tests</small></span></div></div>
   </section>
 
   <footer class="foot"><b>EQUIPO DE CÁTEDRA</b>Dr. Ing. Raúl Moralejo · Lic. Gustavo Manino · Ing. Malena Casas Castrillejo · Ing. María Teresita Cuccia · Ing. Gonzalo Pozzoli · Ing. Erica Caro</footer>
@@ -436,12 +453,17 @@ document.querySelectorAll('[data-l]').forEach(e=>{const c=getComputedStyle(e).co
   e.style.webkitMask='none';e.style.mask='none';
   e.style.background=`url("${ICONS['logo:'+e.dataset.l].replace('%3Csvg','%3Csvg fill=%22'+encodeURIComponent(c)+'%22')}") center/${z} no-repeat`;});
 // Escala cada pantalla (390 px de diseño) al ancho de su marco.
+// Flechas de la arquitectura: cada una a la altura del centro del elemento que indica su data-a.
+function alinearFlechas(){
+  document.querySelectorAll('.lnk div[data-a]').forEach(d=>{const l=d.parentElement,lr=l.getBoundingClientRect(),k=lr.height/l.offsetHeight,r=document.querySelector(d.dataset.a).getBoundingClientRect();
+    d.style.top=((r.top+r.height/2-lr.top)/k)+'px';});
+}
 function scaleAll(){
   document.querySelectorAll('.fit').forEach(f=>{const s=f.querySelector('.scr');const k=f.clientWidth/390;s.style.transform=`scale(${k})`;f.style.height=(s.offsetHeight*k)+'px';});
   const wf=document.getElementById('wf'),w=document.getElementById('w1');const k=wf.clientWidth/w.offsetWidth;w.style.transform=`scale(${k})`;wf.style.height=(w.offsetHeight*k)+'px';
 }
 // Vista previa: escala el póster al ancho de la ventana. No afecta la impresión.
-function fit(){const w=document.getElementById('wrap'),p=w.firstElementChild;if(/auto/.test(location.search))p.style.height='auto';w.style.transform='none';scaleAll();
+function fit(){const w=document.getElementById('wrap'),p=w.firstElementChild;if(/auto/.test(location.search))p.style.height='auto';w.style.transform='none';scaleAll();alinearFlechas();
  const s=Math.min(1,innerWidth/p.offsetWidth);w.style.transform='scale('+s+')';document.body.style.height=(p.offsetHeight*s)+'px'}
 if(/auto/.test(location.search))addEventListener('load',()=>setTimeout(()=>{document.title='H='+[...document.querySelector('.poster').children].map(c=>c.className.split(' ')[0]+':'+Math.round(c.offsetHeight*0.75)).join(' ')},1500));
 addEventListener('resize',fit);addEventListener('load',()=>{scaleAll();fit();document.fonts&&document.fonts.ready.then(fit)});
