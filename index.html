@@ -300,21 +300,21 @@
       }
       .f {
         border-radius: var(--r);
-        padding: 12pt 12pt 0;
+        padding: 12pt;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         color: #fff;
       }
       .f .ph {
-        border-radius: 24pt 24pt 0 0;
+        border-radius: 24pt;
         overflow: hidden;
         background: #1d1a17;
-        padding: 6pt 6pt 0;
+        padding: 6pt;
         box-shadow: 0 0 0 1pt #0004;
       }
       .f .fit {
-        border-radius: 19pt 19pt 0 0;
+        border-radius: 19pt;
         overflow: hidden;
         background: var(--bg);
       }
@@ -1824,17 +1824,14 @@
       .r3 {
         flex: 1.1;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12pt;
-      }
-      .r3 .ic {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
         gap: 8pt;
       }
+      .r3 .ic {
+        gap: 10pt;
+      }
       .r3 .ic b {
-        font-size: 22pt;
+        font-size: 20pt;
       }
       /* arquitectura compacta: 4 clientes en el alto original */
       .arq .col {
@@ -1858,6 +1855,10 @@
       }
       .arq .r3 .ic b {
         font-size: 20pt;
+      }
+      .arq .r3 .ic em {
+        font-size: 14pt;
+        line-height: 1.15;
       }
       .ic.mp {
         border-color: #00b1ea;
@@ -2451,7 +2452,7 @@
           <h2 class="sec t">Arquitectura</h2>
           <div class="ar">
             <div class="col ex">
-              <small>EXTRAS</small>
+              <small>INTEGRACIONES</small>
               <div class="ic g" id="a-goo">
                 <span class="ib" style="color: #4285f4"
                   ><i class="m" data-l="google"></i
@@ -2463,6 +2464,12 @@
                   ><i class="m" data-l="mercadopago"></i
                 ></span>
                 <div><b>MercadoPago</b><em>Donaciones a campañas</em></div>
+              </div>
+              <div class="ic g" id="a-maps">
+                <span class="ib" style="color: #34a853"
+                  ><i class="m" data-i="location-outline"></i
+                ></span>
+                <div><b>OpenStreetMap</b><em>Ubicaciones</em></div>
               </div>
             </div>
             <div class="lnk">
@@ -2530,6 +2537,12 @@
                     ><i class="m" data-i="image-outline"></i
                   ></span>
                   <div><b>Imágenes</b><em>Compresión con sharp</em></div>
+                </div>
+                <div class="ic">
+                  <span class="ib" style="color: #ff4438"
+                    ><i class="m" data-l="redis"></i
+                  ></span>
+                  <div><b>Redis</b><em>Cola de notificaciones</em></div>
                 </div>
               </div>
             </div>
