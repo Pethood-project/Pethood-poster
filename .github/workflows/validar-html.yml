@@ -1,0 +1,16 @@
+name: Validar HTML
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+
+jobs:
+  html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: npx --yes html-validate@11.16.4 index.html
